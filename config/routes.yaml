@@ -3,3 +3,17 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+    blog_list:
+        path: /blog
+        controller : App\Controlller\BlogController::list
+
+    api_post_show:
+        path: /api/posts/{id}
+        controller: App\Controller\BlogApiController::show
+        mehtods: GET|HEAD
+
+    api_post_edit:
+        path: /api/post/{id}
+        controller: App\Controller\BlogApiController::edit
+        methods: PUT
